@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+/* universal styles start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+/* universal styles end */
+
+/* sidebar start here */
+#sidebar {
+  width: 200px;
+  background-color: rgb(223, 222, 222);
+  transition: translateX 5s ease-in-out;
+}
+
+#sidebar nav ul {
+  margin-top: 35px;
+  list-style-type: none;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#sidebar nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+#ham-icon {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 50px;
+  cursor: pointer;
+  display: none;
+}
+
+#cross-icon {
+  position: absolute;
+  top: 20px;
+  left: 140px;
+  width: 35px;
+  cursor: pointer;
+}
+
+.sidebar-move {
+  transform: translateX(-200px);
+}
+/* sidebar ends here */
+
+/* home page start here */
+#main {
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#info-container {
+  width: 70vw;
+  height: 70vh;
+  display: flex;
+}
+
+#person-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  font-size: 30px;
+  gap: 6px;
+}
+
+#greet {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+}
+
+#name {
+  font-size: 1.5em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+#description {
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.75em;
+}
+
+#person-picture {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+
+#person-picture img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+/* home page ends here */
+
+/* contact page start here */
+#contact-details {
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  height: 70vh;
+  gap: 10px;
+  font-size: 20px;
+}
+
+#contact-details h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+#contact-details p {
+  font-size: 0.85em;
+  padding: 12px;
+}
+
+.contact-labels{
+  font-weight: bolder;
+  font-style: italic;
+}
+/* contact page ends here */
+
+/* about page start here */
+#about-me {
+  width: 80vw;
+  height: 100vh;
+  font-size: 20px;
+}
+
+#about-me h2 {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#skills {
+  font-size: 0.85em;
+  font-weight: bold;
+  padding: 0px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+#skills hr {
+  margin: 10px 0px;
+  width: 50vw;
+  border: 2px solid gray;
+}
+
+.skill-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0px;
+}
+
+.skill-container {
+  width: 300px;
+  height: 10px;
+  background-color: red;
+}
+
+.skills-range {
+  height: 10px;
+  background-color: rgb(0, 255, 4);
+}
+
+/* utility classes */
+.fifty-percent {
+  width: 150px;
+}
+
+.seventy-percent {
+  width: 210px;
+}
+
+.ninety-percent {
+  width: 270px;
+}
+/* about page ends here */
+
+@media (max-width: 560px) {
+  #about-me {
+    font-size: 16px;
+  }
+  .skill-container {
+    width: 200px;
+  }
+  /* utility classes */
+  .fifty-percent {
+    width: 100px;
+  }
+
+  .seventy-percent {
+    width: 140px;
+  }
+
+  .ninety-percent {
+    width: 180px;
+  }
+}
+
+@media (max-width: 410px) {
+  #about-me {
+    font-size: 10px;
+  }
+  .skill-container {
+    width: 100px;
+  }
+  /* utility classes */
+  .fifty-percent {
+    width: 50px;
+  }
+
+  .seventy-percent {
+    width: 70px;
+  }
+
+  .ninety-percent {
+    width: 90px;
+  }
+}
+
+@media (max-width: 750px) {
+  #contact-details {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  #contact-details {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 850px) {
+  #sidebar {
+    position: absolute;
+    height: 100vh;
+  }
+
+  #info-container {
+    flex-direction: column;
+    height: 90vh;
+  }
+
+  #person-picture img {
+    width: 80%;
+    height: 40vh;
+  }
+
+  #main {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 400px) {
+  #person-info {
+    font-size: 20px;
+  }
+
+  #ham-icon {
+    top: 2px;
+    left: 2px;
+    width: 35px;
+  }
+
+  #person-picture img {
+    height: 30vh;
+  }
+}
